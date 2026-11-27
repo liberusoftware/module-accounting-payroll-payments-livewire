@@ -23,7 +23,7 @@ it('covers accounting-payroll-payments-livewire components', function (): void {
         'status' => PaymentStatus::Draft,
     ]);
 
-    $component = new PayrollPayments;
+    $component = new PayrollPayments();
     $component->selectBatch((int) $batch->getKey());
     $component->status = 'approved';
     $component->transitionStatus(app(TransitionPayrollPayment::class));
